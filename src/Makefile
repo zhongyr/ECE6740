@@ -12,13 +12,13 @@ TARGET  := ../test/run
   
   #compile and lib parameter
   #编译参数
-CC      := gcc
+CC      := g++
 LIBS    :=
-LDFLAGS :=
+LDFLAGS := -L/usr/include/boost -lboost_serialization
 DEFINES :=
-INCLUDE := -I.
+INCLUDE := -I /usr/include/boost
 CFLAGS  := -g -Wall -O3 $(DEFINES) $(INCLUDE)
-CXXFLAGS:= $(CFLAGS) -DHAVE_CONFIG_H
+CXXFLAGS:= $(CFLAGS)
   
     
     #i think you should do anything here
